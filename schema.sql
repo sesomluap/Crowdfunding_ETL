@@ -1,18 +1,18 @@
 CREATE TABLE "Campaign" (
     "cf_id" int   NOT NULL,
     "contact_id" int   NOT NULL,
-    "company_name" VARCHAR(50)   NOT NULL,
-    "blurb" VARCHAR(50)   NOT NULL,
+    "company_name" VARCHAR(255)   NOT NULL,
+    "blurb" VARCHAR(255)   NOT NULL,
     "goal" float   NOT NULL,
     "pledged" float   NOT NULL,
-    "outcome" VARCHAR(50)   NOT NULL,
+    "outcome" VARCHAR(255)   NOT NULL,
     "backers_count" int   NOT NULL,
-    "country" VARCHAR(50)   NOT NULL,
-    "currency" VARCHAR(50)   NOT NULL,
-    "launch_date" VARCHAR(50)   NOT NULL,
-    "end_date" VARCHAR(50)   NOT NULL,
-    "category_id" VARCHAR(50)   NOT NULL,
-    "subcategory_id" VARCHAR(50)   NOT NULL,
+    "country" VARCHAR(255)   NOT NULL,
+    "currency" VARCHAR(255)   NOT NULL,
+    "launch_date" VARCHAR(255)   NOT NULL,
+    "end_date" VARCHAR(255)   NOT NULL,
+    "category_id" VARCHAR(255)   NOT NULL,
+    "subcategory_id" VARCHAR(255)   NOT NULL,
     CONSTRAINT "pk_Campaign" PRIMARY KEY (
         "cf_id"
      )
@@ -20,25 +20,25 @@ CREATE TABLE "Campaign" (
 
 CREATE TABLE "Contacts" (
     "contact_id" int   NOT NULL,
-    "first_name" VARCHAR(50)   NOT NULL,
-    "last_name" VARCHAR(50)   NOT NULL,
-    "email" VARCHAR(50)   NOT NULL,
+    "first_name" VARCHAR(255)   NOT NULL,
+    "last_name" VARCHAR(255)   NOT NULL,
+    "email" VARCHAR(255)   NOT NULL,
     CONSTRAINT "pk_Contacts" PRIMARY KEY (
         "contact_id"
      )
 );
 
 CREATE TABLE "Category" (
-    "category_id" VARCHAR(50)   NOT NULL,
-    "category_name" VARCHAR(50)   NOT NULL,
+    "category_id" VARCHAR(255)   NOT NULL,
+    "category_name" VARCHAR(255)   NOT NULL,
     CONSTRAINT "pk_Category" PRIMARY KEY (
         "category_id"
      )
 );
 
 CREATE TABLE "Subcategory" (
-    "subcategory_id" VARCHAR(50)   NOT NULL,
-    "subcategory_name" VARCHAR(50)   NOT NULL,
+    "subcategory_id" VARCHAR(255)   NOT NULL,
+    "subcategory_name" VARCHAR(255)   NOT NULL,
     CONSTRAINT "pk_Subcategory" PRIMARY KEY (
         "subcategory_id"
      )
